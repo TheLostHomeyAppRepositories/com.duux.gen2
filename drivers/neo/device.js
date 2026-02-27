@@ -54,8 +54,6 @@ module.exports = class NeoDevice extends Homey.Device {
       });
 
       this.homey.settings.set('firstRun', true);
-
-      // Start polling
       this.startPolling();
 
       const enableNightModeAction = this.homey.flow.getActionCard('enable_night_mode_neo');
