@@ -163,5 +163,8 @@
   },
   "2.4.4": {
     "en": "Added icon for the Duux Bright"
+  },
+  "2.4.5": {
+    "en": "Fixed settings page"
   }
 }
