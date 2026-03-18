@@ -169,5 +169,8 @@
   },
   "2.5.0": {
     "en": "Improved polling logic to reduce the load on the network"
+  },
+  "2.5.1": {
+    "en": "Added telemetry"
   }
 }
