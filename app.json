@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "com.duux.gen2",
-  "version": "2.5.1",
+  "version": "2.6.0",
   "compatibility": ">=12.4.0",
   "sdk": 3,
   "platforms": [
@@ -707,7 +707,7 @@
         ]
       },
       {
-        "id": "whipser_child_lock_enabled",
+        "id": "child_lock_enabled_whisper",
         "title": {
           "en": "Child lock enabled",
           "nl": "Kinderslot ingeschakeld"
@@ -721,7 +721,7 @@
         ]
       },
       {
-        "id": "whipser_child_lock_disabled",
+        "id": "child_lock_disabled_whisper",
         "title": {
           "en": "Child lock disabled",
           "nl": "Kinderslot uitgeschakeld"
@@ -735,7 +735,7 @@
         ]
       },
       {
-        "id": "whipser_night_mode_enabled",
+        "id": "night_mode_enabled_whisper",
         "title": {
           "en": "Night mode enabled",
           "nl": "Nachtmodus ingeschakeld"
@@ -749,7 +749,7 @@
         ]
       },
       {
-        "id": "whipser_night_mode_disabled",
+        "id": "night_mode_disabled_whisper",
         "title": {
           "en": "Night mode disabled",
           "nl": "Nachtmodus uitgeschakeld"
@@ -2272,7 +2272,7 @@
         ]
       },
       {
-        "id": "enable_child_lock_flex2_whisper",
+        "id": "enable_child_lock_whisper",
         "title": {
           "en": "Enable child lock",
           "nl": "Kinderslot inschakelen"

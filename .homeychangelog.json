@@ -172,5 +172,8 @@
   },
   "2.5.1": {
     "en": "Added telemetry"
+  },
+  "2.6.0": {
+    "en": "Added Whisper Flex 2 support"
   }
 }
