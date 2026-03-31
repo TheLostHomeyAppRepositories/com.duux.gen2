@@ -175,5 +175,8 @@
   },
   "2.6.0": {
     "en": "Added Whisper Flex 2 support"
+  },
+  "2.6.1": {
+    "en": "Fix Whisper Flex 2 fan speed capability"
   }
 }
