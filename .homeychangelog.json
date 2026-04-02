@@ -178,5 +178,8 @@
   },
   "2.6.1": {
     "en": "Fix Whisper Flex 2 fan speed capability"
+  },
+  "2.6.2": {
+    "en": "Fix oscillation on Whisper Flex 2"
   }
 }
