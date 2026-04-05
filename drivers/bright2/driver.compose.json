@@ -1,0 +1,52 @@
+{
+  "name": {
+    "en": "Bright 2",
+    "nl": "Bright 2"
+  },
+  "class": "airpurifier",
+  "capabilities": [
+    "onoff",
+    "measure_tvoc",
+    "measure_pm25",
+    "ionizer",
+    "night_mode",
+    "fan_speed_bright2"
+  ],
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "cloud"
+  ],
+  "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "xlarge": "{{driverAssetsPath}}/images/xlarge.png"
+  },
+  "pair": [
+    {
+      "id": "email"
+    },
+    {
+      "id": "code"
+    },
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": { "next": "add_devices" },
+      "options": { "singular": false }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ],
+  "repair": [
+    {
+      "id": "email"
+    },
+    {
+      "id": "code"
+    }
+  ]
+}

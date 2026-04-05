@@ -1,0 +1,125 @@
+{
+  "triggers": [
+    {
+      "id": "night_mode_enabled_bright2",
+      "title": {
+        "en": "Night mode enabled",
+        "nl": "Nachtmodus ingeschakeld"
+      }
+    },
+    {
+      "id": "night_mode_disabled_bright2",
+      "title": {
+        "en": "Night mode disabled",
+        "nl": "Nachtmodus uitgeschakeld"
+      }
+    },
+    {
+      "id": "ionizer_enabled_bright2",
+      "title": {
+        "en": "Ionizer enabled",
+        "nl": "Ionisator ingeschakeld"
+      }
+    },
+    {
+      "id": "ionizer_disabled_bright2",
+      "title": {
+        "en": "Ionizer disabled",
+        "nl": "Ionisator uitgeschakeld"
+      }
+    }
+  ],
+  "conditions":[
+    {
+      "id": "night_mode_condition_bright2",
+      "title": {
+        "en": "Night mode is !{{enabled|disabled}}",
+        "nl": "Nachtmodus is !{{ingeschakeld|uitgeschakeld}}"
+      }
+    },
+    {
+      "id": "ionizer_condition_bright2",
+      "title": {
+        "en": "Night mode is !{{enabled|disabled}}",
+        "nl": "Nachtmodus is !{{ingeschakeld|uitgeschakeld}}"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "id": "enable_night_mode_bright2",
+      "title": {
+        "en": "Enable night mode",
+        "nl": "Nachtmodus inschakelen"
+      } 
+    },
+    {
+      "id": "disable_night_mode_bright2",
+      "title": {
+        "en": "Disable night mode",
+        "nl": "Nachtmodus uitschakelen"
+      } 
+    },
+    {
+      "id": "enable_ionizer_bright2",
+      "title": {
+        "en": "Enable ionizer",
+        "nl": "Ionisator inschakelen"
+      } 
+    },
+    {
+      "id": "disable_ionizer_bright2",
+      "title": {
+        "en": "Disable ionizer",
+        "nl": "Ionisator uitschakelen"
+      } 
+    },
+    {
+      "id": "set_fan_speed_bright2",
+      "title": {
+        "en": "Set fan speed",
+        "nl": "Ventilatorsnelheid instellen"
+      },
+      "titleFormatted": {
+        "en": "Set fan speed to [[speed]]",
+        "nl": "Ventilatorsnelheid instellen op [[speed]]"
+      },
+      "args": [
+        {
+          "name": "speed",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "low",
+              "label": {
+                "en": "Low",
+                "nl": "Laag"
+              }
+            },
+            {
+              "id": "medium",
+              "label": {
+                "en": "Medium",
+                "nl": "Medium"
+              }
+            },
+            {
+              "id": "high",
+              "label": {
+                "en": "High",
+                "nl": "Hoog"
+              }
+            },
+            {
+              "id": "auto",
+              "label": {
+                "en": "Auto",
+                "nl": "Auto"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

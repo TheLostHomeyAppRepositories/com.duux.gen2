@@ -259,6 +259,62 @@
         ]
       },
       {
+        "id": "night_mode_enabled_bright2",
+        "title": {
+          "en": "Night mode enabled",
+          "nl": "Nachtmodus ingeschakeld"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=bright2"
+          }
+        ]
+      },
+      {
+        "id": "night_mode_disabled_bright2",
+        "title": {
+          "en": "Night mode disabled",
+          "nl": "Nachtmodus uitgeschakeld"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=bright2"
+          }
+        ]
+      },
+      {
+        "id": "ionizer_enabled_bright2",
+        "title": {
+          "en": "Ionizer enabled",
+          "nl": "Ionisator ingeschakeld"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=bright2"
+          }
+        ]
+      },
+      {
+        "id": "ionizer_disabled_bright2",
+        "title": {
+          "en": "Ionizer disabled",
+          "nl": "Ionisator uitgeschakeld"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=bright2"
+          }
+        ]
+      },
+      {
         "id": "eco_mode_enabled",
         "title": {
           "en": "Eco mode enabled",
@@ -891,6 +947,34 @@
         ]
       },
       {
+        "id": "night_mode_condition_bright2",
+        "title": {
+          "en": "Night mode is !{{enabled|disabled}}",
+          "nl": "Nachtmodus is !{{ingeschakeld|uitgeschakeld}}"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=bright2"
+          }
+        ]
+      },
+      {
+        "id": "ionizer_condition_bright2",
+        "title": {
+          "en": "Night mode is !{{enabled|disabled}}",
+          "nl": "Nachtmodus is !{{ingeschakeld|uitgeschakeld}}"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=bright2"
+          }
+        ]
+      },
+      {
         "id": "eco_mode_condition",
         "title": {
           "en": "Eco mode is !{{enabled|disabled}}",
@@ -1489,6 +1573,114 @@
                 "label": {
                   "en": "Night",
                   "nl": "Nacht"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "enable_night_mode_bright2",
+        "title": {
+          "en": "Enable night mode",
+          "nl": "Nachtmodus inschakelen"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=bright2"
+          }
+        ]
+      },
+      {
+        "id": "disable_night_mode_bright2",
+        "title": {
+          "en": "Disable night mode",
+          "nl": "Nachtmodus uitschakelen"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=bright2"
+          }
+        ]
+      },
+      {
+        "id": "enable_ionizer_bright2",
+        "title": {
+          "en": "Enable ionizer",
+          "nl": "Ionisator inschakelen"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=bright2"
+          }
+        ]
+      },
+      {
+        "id": "disable_ionizer_bright2",
+        "title": {
+          "en": "Disable ionizer",
+          "nl": "Ionisator uitschakelen"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=bright2"
+          }
+        ]
+      },
+      {
+        "id": "set_fan_speed_bright2",
+        "title": {
+          "en": "Set fan speed",
+          "nl": "Ventilatorsnelheid instellen"
+        },
+        "titleFormatted": {
+          "en": "Set fan speed to [[speed]]",
+          "nl": "Ventilatorsnelheid instellen op [[speed]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=bright2"
+          },
+          {
+            "name": "speed",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "low",
+                "label": {
+                  "en": "Low",
+                  "nl": "Laag"
+                }
+              },
+              {
+                "id": "medium",
+                "label": {
+                  "en": "Medium",
+                  "nl": "Medium"
+                }
+              },
+              {
+                "id": "high",
+                "label": {
+                  "en": "High",
+                  "nl": "Hoog"
+                }
+              },
+              {
+                "id": "auto",
+                "label": {
+                  "en": "Auto",
+                  "nl": "Auto"
                 }
               }
             ]
@@ -2750,6 +2942,63 @@
     },
     {
       "name": {
+        "en": "Bright 2",
+        "nl": "Bright 2"
+      },
+      "class": "airpurifier",
+      "capabilities": [
+        "onoff",
+        "measure_tvoc",
+        "measure_pm25",
+        "ionizer",
+        "night_mode",
+        "fan_speed_bright2"
+      ],
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "cloud"
+      ],
+      "images": {
+        "small": "/drivers/bright2/assets/images/small.png",
+        "large": "/drivers/bright2/assets/images/large.png",
+        "xlarge": "/drivers/bright2/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "email"
+        },
+        {
+          "id": "code"
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": false
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "repair": [
+        {
+          "id": "email"
+        },
+        {
+          "id": "code"
+        }
+      ],
+      "id": "bright2"
+    },
+    {
+      "name": {
         "en": "Edge",
         "nl": "Edge"
       },
@@ -3448,6 +3697,46 @@
           "title": {
             "en": "Nacht",
             "nl": "Nacht"
+          }
+        }
+      ]
+    },
+    "fan_speed_bright2": {
+      "type": "enum",
+      "title": {
+        "en": "Fan speed",
+        "nl": "Ventilatorsnelheid"
+      },
+      "uiComponent": "picker",
+      "getable": true,
+      "setable": true,
+      "values": [
+        {
+          "id": "low",
+          "title": {
+            "en": "Low",
+            "nl": "Laag"
+          }
+        },
+        {
+          "id": "medium",
+          "title": {
+            "en": "Medium",
+            "nl": "Medium"
+          }
+        },
+        {
+          "id": "high",
+          "title": {
+            "en": "High",
+            "nl": "Hoog"
+          }
+        },
+        {
+          "id": "auto",
+          "title": {
+            "en": "Auto",
+            "nl": "Auto"
           }
         }
       ]
