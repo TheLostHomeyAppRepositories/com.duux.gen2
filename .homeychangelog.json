@@ -190,5 +190,8 @@
   },
   "2.7.2": {
     "en": "Added HEPA filter percentage to the Duux Bright"
+  },
+  "2.7.3": {
+    "en": "Update dependencies"
   }
 }
