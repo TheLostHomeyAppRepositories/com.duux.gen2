@@ -193,5 +193,8 @@
   },
   "2.7.3": {
     "en": "Update dependencies"
+  },
+  "2.7.4": {
+    "en": "Added extra condition cards to the Bora for convenience"
   }
 }
