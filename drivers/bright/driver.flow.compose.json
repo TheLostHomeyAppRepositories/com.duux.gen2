@@ -29,6 +29,60 @@
         "en": "Ionizer is !{{enabled|disabled}}",
         "nl": "Ionisator is !{{ingeschakeld|uitgeschakeld}}"
       }
+    },
+    {
+      "id": "fan_speed_condition_bright",
+      "title": {
+        "en": "The fan speed !{{is|isn't}} ...",
+        "nl": "De ventilatorsnelheid !{{is|is niet}} ..."
+      },
+      "titleFormatted": {
+        "en": "The fan speed !{{is|isn't}} [[speed]]",
+        "nl": "De ventilatorsnelheid !{{is|is niet}} [[speed]]"
+      },
+      "args": [
+        {
+          "name": "speed",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "low",
+              "label": {
+                "en": "Low",
+                "nl": "Laag"
+              }
+            },
+            {
+              "id": "medium",
+              "label": {
+                "en": "Medium",
+                "nl": "Medium"
+              }
+            },
+            {
+              "id": "high",
+              "label": {
+                "en": "High",
+                "nl": "Hoog"
+              }
+            },
+            {
+              "id": "auto",
+              "label": {
+                "en": "Auto",
+                "nl": "Auto"
+              }
+            },
+            {
+              "id": "night",
+              "label": {
+                "en": "Night",
+                "nl": "Nacht"
+              }
+            }
+          ]
+        }
+      ]
     }
   ],
   "actions": [

@@ -77,10 +77,16 @@ module.exports = class BrightDevice extends Homey.Device {
       const disableIonizerAction = this.homey.flow.getActionCard('disable_ionizer');
       const setFanSpeedAction = this.homey.flow.getActionCard('set_fan_speed_bright');
       const ionizerCondition = this.homey.flow.getConditionCard('ionizer_condition');
+      const fanSpeedCondition = this.homey.flow.getConditionCard('fan_speed_condition_bright');
 
       ionizerCondition.registerRunListener(async (args, state) => {
         const isIon = this.getCapabilityValue('ionizer');
         return isIon;
+      });
+
+      fanSpeedCondition.registerRunListener(async (args, state) => {
+        const fanSpeed = this.getCapabilityValue('fan_speed_bright');
+        return fanSpeed === args.speed;
       });
 
       setFanSpeedAction.registerRunListener(async (args, state) => {
