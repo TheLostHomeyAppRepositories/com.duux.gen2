@@ -3,10 +3,6 @@
 const Homey = require('homey');
 const axios = require('axios');
 const https = require('https');
-const CacheableLookup = require('cacheable-lookup');
-const cacheable = new CacheableLookup({
-  maxTtl: 300,
-});
 const httpsAgent = new https.Agent({
   keepAlive: true,
   keepAliveMsecs: 10000,
@@ -14,7 +10,6 @@ const httpsAgent = new https.Agent({
   maxFreeSockets: 4,
   timeout: 30000,
 });
-cacheable.install(httpsAgent);
 const apiClient = axios.create({
   baseURL: 'https://v5.api.cloudgarden.nl',
   httpsAgent,
@@ -63,7 +58,6 @@ module.exports = class BeamMiniDevice extends Homey.Device {
 
       this.homey.settings.set('firstRun', true);
 
-      // Start polling
       this.startPolling();
 
       const setFanSpeedAction = this.homey.flow.getActionCard('set_fan_speed_beam_mini');
@@ -125,13 +119,8 @@ module.exports = class BeamMiniDevice extends Homey.Device {
   }
 
   startPolling() {
-    // Clear any existing interval
     this.stopPolling();
-    
-    // Poll immediately
     this.pollDeviceStatus();
-    
-    // Then poll every 10 seconds
     this.pollInterval = this.homey.setInterval(() => {
       this.pollDeviceStatus();
     }, 15000);
@@ -182,14 +171,12 @@ module.exports = class BeamMiniDevice extends Homey.Device {
           });
         }
 
-        // Update humidity (if you have this capability)
         if (this.hasCapability('measure_humidity') && status.hum !== undefined) {
           await this.setCapabilityValue('measure_humidity', status.hum).catch(err => {
             this.error('Error setting humidity capability:', err);
           });
         }
 
-        // Update target humidity setpoint (if you have this capability)
         if (this.hasCapability('target_humidity') && status.sp !== undefined) {
           const setpoint = status.sp / 100;
           await this.setCapabilityValue('target_humidity', setpoint).catch(err => {
@@ -264,5 +251,4 @@ module.exports = class BeamMiniDevice extends Homey.Device {
       this.error('Error controlling device:', error.message);
     }
   }
-
 };
