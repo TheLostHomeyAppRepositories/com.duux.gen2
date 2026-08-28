@@ -274,5 +274,8 @@
   },
   "2.8.8": {
     "en": "Update dependencies"
+  },
+  "2.9.0": {
+    "en": "Removed DNS cache for all devices"
   }
 }
