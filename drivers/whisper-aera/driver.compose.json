@@ -1,0 +1,66 @@
+{
+  "name": {
+    "en": "Whisper Aera"
+  },
+  "class": "fan",
+  "capabilities": [
+    "onoff",
+    "fan_speed",
+    "whisper_mode_2",
+    "horizontal_oscillation_aera",
+    "vertical_oscillation2",
+    "measure_battery",
+    "night_mode",
+    "child_lock",
+    "ionizer"
+  ],
+  "energy": {
+    "batteries": ["INTERNAL"]
+  },
+  "capabilitiesOptions": {
+    "fan_speed": {
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "units": "",
+      "decimals": 0
+    }
+  },
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "cloud"
+  ],
+  "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "xlarge": "{{driverAssetsPath}}/images/xlarge.png"
+  },
+  "pair": [
+    {
+      "id": "email"
+    },
+    {
+      "id": "code"
+    },
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": { "next": "add_devices" },
+      "options": { "singular": false }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ],
+  "repair": [
+    {
+      "id": "email"
+    },
+    {
+      "id": "code"
+    }
+  ]
+}

@@ -776,6 +776,104 @@
         ]
       },
       {
+        "id": "horizontal_oscillation_aera_changed",
+        "title": {
+          "en": "Horizontal oscillation changed",
+          "nl": "Horizontale oscillatie veranderd"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=whisper-aera"
+          }
+        ]
+      },
+      {
+        "id": "child_lock_enabled_whisper_aera",
+        "title": {
+          "en": "Child lock enabled",
+          "nl": "Kinderslot ingeschakeld"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=whisper-aera"
+          }
+        ]
+      },
+      {
+        "id": "child_lock_disabled_whisper_aera",
+        "title": {
+          "en": "Child lock disabled",
+          "nl": "Kinderslot uitgeschakeld"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=whisper-aera"
+          }
+        ]
+      },
+      {
+        "id": "night_mode_enabled_whisper_aera",
+        "title": {
+          "en": "Night mode enabled",
+          "nl": "Nachtmodus ingeschakeld"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=whisper-aera"
+          }
+        ]
+      },
+      {
+        "id": "night_mode_disabled_whisper_aera",
+        "title": {
+          "en": "Night mode disabled",
+          "nl": "Nachtmodus uitgeschakeld"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=whisper-aera"
+          }
+        ]
+      },
+      {
+        "id": "ionizer_enabled_aera",
+        "title": {
+          "en": "Ionizer enabled",
+          "nl": "Ionisator ingeschakeld"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=whisper-aera"
+          }
+        ]
+      },
+      {
+        "id": "ionizer_disabled_aera",
+        "title": {
+          "en": "Ionizer disabled",
+          "nl": "Ionisator uitgeschakeld"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=whisper-aera"
+          }
+        ]
+      },
+      {
         "id": "whisper_mode_changed",
         "title": {
           "en": "Mode changed",
@@ -1536,6 +1634,48 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=north9k"
+          }
+        ]
+      },
+      {
+        "id": "whisper_night_mode_condition_aera",
+        "title": {
+          "en": "Night mode is !{{enabled|disabled}}",
+          "nl": "Nachtmodus is !{{ingeschakeld|uitgeschakeld}}"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=whisper-aera"
+          }
+        ]
+      },
+      {
+        "id": "whisper_child_lock_condition_aera",
+        "title": {
+          "en": "Child lock is !{{enabled|disabled}}",
+          "nl": "Kinderslot is !{{ingeschakeld|uitgeschakeld}}"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=whisper-aera"
+          }
+        ]
+      },
+      {
+        "id": "ionizer_condition_aera",
+        "title": {
+          "en": "Ionizer is !{{enabled|disabled}}",
+          "nl": "Ionisator is !{{ingeschakeld|uitgeschakeld}}"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=whisper-aera"
           }
         ]
       },
@@ -2987,6 +3127,225 @@
         ]
       },
       {
+        "id": "set_whisper_flex_2_mode_aera",
+        "title": {
+          "en": "Set mode",
+          "nl": "Modus instellen"
+        },
+        "titleFormatted": {
+          "en": "Set mode to [[mode]]",
+          "nl": "Modus instellen op [[mode]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=whisper-aera"
+          },
+          {
+            "name": "mode",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "normal",
+                "label": {
+                  "en": "Normal",
+                  "nl": "Normaal"
+                }
+              },
+              {
+                "id": "nature",
+                "label": {
+                  "en": "Nature",
+                  "nl": "Naturel"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "enable_night_mode_whisper_aera",
+        "title": {
+          "en": "Enable night mode",
+          "nl": "Nachtmodus inschakelen"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=whisper-aera"
+          }
+        ]
+      },
+      {
+        "id": "disable_night_mode_whisper_aera",
+        "title": {
+          "en": "Disable night mode",
+          "nl": "Nachtmodus uitschakelen"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=whisper-aera"
+          }
+        ]
+      },
+      {
+        "id": "enable_child_lock_whisper_aera",
+        "title": {
+          "en": "Enable child lock",
+          "nl": "Kinderslot inschakelen"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=whisper-aera"
+          }
+        ]
+      },
+      {
+        "id": "disable_child_lock_whisper_aera",
+        "title": {
+          "en": "Disable child lock",
+          "nl": "Kinderslot uitschakelen"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=whisper-aera"
+          }
+        ]
+      },
+      {
+        "id": "enable_ionizer_aera",
+        "title": {
+          "en": "Enable ionizer",
+          "nl": "Ionisator inschakelen"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=whisper-aera"
+          }
+        ]
+      },
+      {
+        "id": "disable_ionizer_aera",
+        "title": {
+          "en": "Disable ionizer",
+          "nl": "Ionisator uitscakelen"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=whisper-aera"
+          }
+        ]
+      },
+      {
+        "id": "set_vertical_oscillation_aera",
+        "title": {
+          "en": "Set vertical oscillation",
+          "nl": "Verticale oscillatie instellen"
+        },
+        "titleFormatted": {
+          "en": "Set vertical oscillation to [[mode]]",
+          "nl": "Verticale oscillatie instellen op [[mode]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=whisper-aera"
+          },
+          {
+            "name": "mode",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "45",
+                "label": {
+                  "en": "45°",
+                  "nl": "45°"
+                }
+              },
+              {
+                "id": "100",
+                "label": {
+                  "en": "100°",
+                  "nl": "100°"
+                }
+              },
+              {
+                "id": "off",
+                "label": {
+                  "en": "Off",
+                  "nl": "Uit"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "set_horizontal_oscillation_aera",
+        "title": {
+          "en": "Set horizontal oscillation",
+          "nl": "Horizontale oscillatie instellen"
+        },
+        "titleFormatted": {
+          "en": "Set horizontal oscillation to [[mode]]",
+          "nl": "Horizontale oscillatie instellen op [[mode]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=whisper-aera"
+          },
+          {
+            "name": "mode",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "30",
+                "label": {
+                  "en": "30°",
+                  "nl": "30°"
+                }
+              },
+              {
+                "id": "60",
+                "label": {
+                  "en": "60°",
+                  "nl": "60°"
+                }
+              },
+              {
+                "id": "90",
+                "label": {
+                  "en": "90°",
+                  "nl": "90°"
+                }
+              },
+              {
+                "id": "off",
+                "label": {
+                  "en": "Off",
+                  "nl": "Uit"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
         "id": "set_whisper_flex_mode",
         "title": {
           "en": "Set mode",
@@ -4230,6 +4589,79 @@
     },
     {
       "name": {
+        "en": "Whisper Aera"
+      },
+      "class": "fan",
+      "capabilities": [
+        "onoff",
+        "fan_speed",
+        "whisper_mode_2",
+        "horizontal_oscillation_aera",
+        "vertical_oscillation2",
+        "measure_battery",
+        "night_mode",
+        "child_lock",
+        "ionizer"
+      ],
+      "energy": {
+        "batteries": [
+          "INTERNAL"
+        ]
+      },
+      "capabilitiesOptions": {
+        "fan_speed": {
+          "min": 1,
+          "max": 30,
+          "step": 1,
+          "units": "",
+          "decimals": 0
+        }
+      },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "cloud"
+      ],
+      "images": {
+        "small": "/drivers/whisper-aera/assets/images/small.png",
+        "large": "/drivers/whisper-aera/assets/images/large.png",
+        "xlarge": "/drivers/whisper-aera/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "email"
+        },
+        {
+          "id": "code"
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": false
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "repair": [
+        {
+          "id": "email"
+        },
+        {
+          "id": "code"
+        }
+      ],
+      "id": "whisper-aera"
+    },
+    {
+      "name": {
         "en": "Whisper Flex"
       },
       "class": "fan",
@@ -4755,6 +5187,46 @@
       "uiComponent": "button",
       "uiQuickAction": false,
       "icon": "/assets/horizontal_oscillation.svg"
+    },
+    "horizontal_oscillation_aera": {
+      "type": "enum",
+      "title": {
+        "en": "Horizontal oscillation",
+        "nl": "Horizontale oscillatie"
+      },
+      "uiComponent": "picker",
+      "getable": true,
+      "setable": true,
+      "values": [
+        {
+          "id": "30",
+          "title": {
+            "en": "30°",
+            "nl": "30°"
+          }
+        },
+        {
+          "id": "60",
+          "title": {
+            "en": "60°",
+            "nl": "60°"
+          }
+        },
+        {
+          "id": "90",
+          "title": {
+            "en": "90°",
+            "nl": "90°"
+          }
+        },
+        {
+          "id": "off",
+          "title": {
+            "en": "Off",
+            "nl": "Uit"
+          }
+        }
+      ]
     },
     "horizontal_oscillation_ultimate": {
       "type": "enum",

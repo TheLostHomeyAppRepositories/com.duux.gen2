@@ -1,0 +1,240 @@
+{
+  "triggers": [
+    {
+      "id": "horizontal_oscillation_aera_changed",
+      "title": {
+        "en": "Horizontal oscillation changed",
+        "nl": "Horizontale oscillatie veranderd"
+      }
+    },
+    {
+      "id": "child_lock_enabled_whisper_aera",
+      "title": {
+        "en": "Child lock enabled",
+        "nl": "Kinderslot ingeschakeld"
+      }
+    },
+    {
+      "id": "child_lock_disabled_whisper_aera",
+      "title": {
+        "en": "Child lock disabled",
+        "nl": "Kinderslot uitgeschakeld"
+      }
+    },
+    {
+      "id": "night_mode_enabled_whisper_aera",
+      "title": {
+        "en": "Night mode enabled",
+        "nl": "Nachtmodus ingeschakeld"
+      }
+    },
+    {
+      "id": "night_mode_disabled_whisper_aera",
+      "title": {
+        "en": "Night mode disabled",
+        "nl": "Nachtmodus uitgeschakeld"
+      }
+    },
+    {
+      "id": "ionizer_enabled_aera",
+      "title": {
+        "en": "Ionizer enabled",
+        "nl": "Ionisator ingeschakeld"
+      }
+    },
+    {
+      "id": "ionizer_disabled_aera",
+      "title": {
+        "en": "Ionizer disabled",
+        "nl": "Ionisator uitgeschakeld"
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "id": "whisper_night_mode_condition_aera",
+      "title": {
+        "en": "Night mode is !{{enabled|disabled}}",
+        "nl": "Nachtmodus is !{{ingeschakeld|uitgeschakeld}}"
+      }
+    },
+    {
+      "id": "whisper_child_lock_condition_aera",
+      "title": {
+        "en": "Child lock is !{{enabled|disabled}}",
+        "nl": "Kinderslot is !{{ingeschakeld|uitgeschakeld}}"
+      }
+    },
+    {
+      "id": "ionizer_condition_aera",
+      "title": {
+        "en": "Ionizer is !{{enabled|disabled}}",
+        "nl": "Ionisator is !{{ingeschakeld|uitgeschakeld}}"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "id": "set_whisper_flex_2_mode_aera",
+      "title": {
+        "en": "Set mode",
+        "nl": "Modus instellen"
+      },
+      "titleFormatted": {
+        "en": "Set mode to [[mode]]",
+        "nl": "Modus instellen op [[mode]]"
+      },
+      "args": [
+        {
+          "name": "mode",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "normal",
+              "label": {
+                "en": "Normal",
+                "nl": "Normaal"
+              }
+            },
+            {
+              "id": "nature",
+              "label": {
+                "en": "Nature",
+                "nl": "Naturel"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "enable_night_mode_whisper_aera",
+      "title": {
+        "en": "Enable night mode",
+        "nl": "Nachtmodus inschakelen"
+      }
+    },
+    {
+      "id": "disable_night_mode_whisper_aera",
+      "title": {
+        "en": "Disable night mode",
+        "nl": "Nachtmodus uitschakelen"
+      }
+    },
+    {
+      "id": "enable_child_lock_whisper_aera",
+      "title": {
+        "en": "Enable child lock",
+        "nl": "Kinderslot inschakelen"
+      }
+    },
+    {
+      "id": "disable_child_lock_whisper_aera",
+      "title": {
+        "en": "Disable child lock",
+        "nl": "Kinderslot uitschakelen"
+      }
+    },
+    {
+      "id": "enable_ionizer_aera",
+      "title": {
+        "en": "Enable ionizer",
+        "nl": "Ionisator inschakelen"
+      }
+    },
+    {
+      "id": "disable_ionizer_aera",
+      "title": {
+        "en": "Disable ionizer",
+        "nl": "Ionisator uitscakelen"
+      }
+    },
+    {
+      "id": "set_vertical_oscillation_aera",
+      "title": {
+        "en": "Set vertical oscillation",
+        "nl": "Verticale oscillatie instellen"
+      },
+      "titleFormatted": {
+        "en": "Set vertical oscillation to [[mode]]",
+        "nl": "Verticale oscillatie instellen op [[mode]]"
+      },
+      "args": [
+        {
+          "name": "mode",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "45",
+              "label": {
+                "en": "45°",
+                "nl": "45°"
+              }
+            },
+            {
+              "id": "100",
+              "label": {
+                "en": "100°",
+                "nl": "100°"
+              }
+            },
+            {
+              "id": "off",
+              "label": {
+                "en": "Off",
+                "nl": "Uit"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "set_horizontal_oscillation_aera",
+      "title": {
+        "en": "Set horizontal oscillation",
+        "nl": "Horizontale oscillatie instellen"
+      },
+      "titleFormatted": {
+        "en": "Set horizontal oscillation to [[mode]]",
+        "nl": "Horizontale oscillatie instellen op [[mode]]"
+      },
+      "args": [
+        {
+          "name": "mode",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "30",
+              "label": {
+                "en": "30°",
+                "nl": "30°"
+              }
+            },
+            {
+              "id": "60",
+              "label": {
+                "en": "60°",
+                "nl": "60°"
+              }
+            },
+            {
+              "id": "90",
+              "label": {
+                "en": "90°",
+                "nl": "90°"
+              }
+            },
+            {
+              "id": "off",
+              "label": {
+                "en": "Off",
+                "nl": "Uit"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

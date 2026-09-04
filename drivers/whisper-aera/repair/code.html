@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .error {
+        color: red;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset class="homey-form-fieldset">
+      <legend class="homey-form-legend">Duux</legend>
+      <br>
+      <p data-i18n="pair.codetext">A code has been sent to your email address. Enter this code below to log in.</p>
+      <div class="homey-form-group">
+        <label class="homey-form-label" for="code" data-i18n="pair.code">Code</label>
+        <input class="homey-form-input" id="code" type="text" value="" />
+      </div>
+    </fieldset>
+    <p id="error" class="error" data-i18n="pair.failed">Invalid code</p>
+
+    <button id="savebtn" class="homey-button-primary-full" data-i18n="pair.save">Save</button>
+    <script type="text/javascript">
+      const codeElement = document.getElementById('code');
+      const failedElement = document.getElementById('error');
+      const saveButton = document.getElementById('savebtn');
+      failedElement.style.display = 'none';
+        saveButton.addEventListener("click", function (e) {
+          setSaving();
+          const code = codeElement.value;
+          Homey.emit("code", { code: code  }).then(function (result) {
+            if (result === false) {
+              failedElement.style.display = 'block';
+              setSave();
+            }
+          });
+        });
+        function setSave() {
+          saveButton.className = 'homey-button-primary-full';
+          saveButton.textContent = Homey.__('pair.save');
+        }
+
+        function setSaving() {
+          saveButton.className = 'homey-button-primary-full is-loading';
+          saveButton.textContent = Homey.__('pair.saving');
+        }
+    </script>
+  </body>
+</html>

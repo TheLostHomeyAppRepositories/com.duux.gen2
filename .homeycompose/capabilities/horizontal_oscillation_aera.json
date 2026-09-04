@@ -1,0 +1,40 @@
+{
+  "type": "enum",
+  "title": {
+    "en": "Horizontal oscillation",
+    "nl": "Horizontale oscillatie"
+  },
+  "uiComponent": "picker",
+  "getable": true,
+  "setable": true,
+  "values": [
+    {
+      "id": "30",
+      "title": { 
+        "en": "30°",
+        "nl": "30°"
+      }
+    },
+    {
+      "id": "60",
+      "title": { 
+        "en": "60°",
+        "nl": "60°"
+      }
+    },
+    {
+      "id": "90",
+      "title": { 
+        "en": "90°",
+        "nl": "90°"
+      }
+    },
+    {
+      "id": "off",
+      "title": { 
+        "en": "Off",
+        "nl": "Uit"
+      }
+    }
+  ]
+}
