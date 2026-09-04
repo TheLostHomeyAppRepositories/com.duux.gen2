@@ -277,5 +277,8 @@
   },
   "2.9.0": {
     "en": "Removed DNS cache for all devices"
+  },
+  "2.10.0": {
+    "en": "Added Whisper Aera"
   }
 }
