@@ -17,7 +17,8 @@
         "temp-high": "Storing: De omgevingstemperatuur is te hoog",
         "water-empty": "De watertank is leeg",
         "missing-tank": "De watertank ontbreekt",
-        "missing-tank-and-element": "De watertank en het element ontbreken"
+        "missing-tank-and-element": "De watertank en het element ontbreken",
+        "auth": "Sessie verlopen. Log opnieuw in door op de knop hieronder te klikken."
     },
     "settings": {
         "title": "Debug",

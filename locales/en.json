@@ -17,7 +17,8 @@
         "temp-high": "Fault: Ambient temperature is too high",
         "water-empty": "The water tank is empty",
         "missing-tank": "The water tank is missing",
-        "missing-tank-and-element": "The water tank and the element are missing"
+        "missing-tank-and-element": "The water tank and the element are missing",
+        "auth": "Authentication required. Please re-login by pressing the button below."
     },
     "settings": {
         "title": "Debug",

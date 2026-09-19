@@ -110,98 +110,6 @@ module.exports = class WhisperAeraDevice extends Homey.Device {
       this.setStoreValue('firstRun', true);
 
       this.startPolling();
-
-      const setHorizontalOscillationAction = this.homey.flow.getActionCard('set_horizontal_oscillation_aera');
-      const setVerticalOscillationAction = this.homey.flow.getActionCard('set_vertical_oscillation_aera');
-      const setModeAction = this.homey.flow.getActionCard('set_whisper_flex_2_mode_aera');
-      const enableChildLockAction = this.homey.flow.getActionCard('enable_child_lock_whisper_aera');
-      const disableChildLockAction = this.homey.flow.getActionCard('disable_child_lock_whisper_aera');
-      const enableNightModeAction = this.homey.flow.getActionCard('enable_night_mode_whisper_aera');
-      const disableNightModeAction = this.homey.flow.getActionCard('disable_night_mode_whisper_aera');
-      const enableIonizerAction = this.homey.flow.getActionCard('enable_ionizer_aera');
-      const disableIonizerAction = this.homey.flow.getActionCard('disable_ionizer_aera');
-      const childLockCondition = this.homey.flow.getConditionCard('whisper_child_lock_condition_aera');
-      const nightModeCondition = this.homey.flow.getConditionCard('whisper_night_mode_condition_aera');
-      const ionizerCondition = this.homey.flow.getConditionCard('ionizer_condition_aera');
-
-
-      setModeAction.registerRunListener(async (args, state) => {
-        if (args.mode === 'normal') {
-          await this.sendCommand("tune set mode 0");
-        } else if (args.mode === 'nature') {
-          await this.sendCommand("tune set mode 1");
-        }
-        return true;
-      });
-
-      setHorizontalOscillationAction.registerRunListener(async (args, state) => {
-        if (args.mode === 'off') {
-          await this.sendCommand("tune set horosc 0");
-        } else if (args.mode === '30') {
-          await this.sendCommand("tune set horosc 1");
-        } else if (args.mode === '60') {
-          await this.sendCommand("tune set horosc 2");
-        } else if (args.mode === '90') {
-          await this.sendCommand("tune set horosc 3");
-        }
-        return true;
-      });
-
-      setVerticalOscillationAction.registerRunListener(async (args, state) => {
-        if (args.mode === 'off') {
-          await this.sendCommand("tune set verosc 0");
-        } else if (args.mode === '45') {
-          await this.sendCommand("tune set verosc 1");
-        } else if (args.mode === '100') {
-          await this.sendCommand("tune set verosc 2");
-        }
-        return true;
-      });
-
-      enableChildLockAction.registerRunListener(async (args, state) => {
-        await this.sendCommand("tune set lock 1");
-        return true;
-      });
-
-      disableChildLockAction.registerRunListener(async (args, state) => {
-        await this.sendCommand("tune set lock 0");
-        return true;
-      });
-
-      enableNightModeAction.registerRunListener(async (args, state) => {
-        await this.sendCommand("tune set night 1");
-        return true;
-      });
-
-      disableNightModeAction.registerRunListener(async (args, state) => {
-        await this.sendCommand("tune set night 0");
-        return true;
-      });
-
-      enableIonizerAction.registerRunListener(async (args, state) => {
-        await this.sendCommand("tune set ion 1");
-        return true;
-      });
-
-      disableIonizerAction.registerRunListener(async (args, state) => {
-        await this.sendCommand("tune set ion 0");
-        return true;
-      });
-
-      childLockCondition.registerRunListener(async (args, state) => {
-        const isChildLock = this.getCapabilityValue('child_lock');
-        return isChildLock;
-      });
-
-      nightModeCondition.registerRunListener(async (args, state) => {
-        const isNightMode = this.getCapabilityValue('night_mode');
-        return isNightMode;
-      });
-
-      ionizerCondition.registerRunListener(async (args, state) => {
-        const isIonizerOn = this.getCapabilityValue('ionizer');
-        return isIonizerOn;
-      });
     } catch (error) {
       this.error('Error during Whisper Flex 2 device initialization:', error);
     }
@@ -425,7 +333,7 @@ module.exports = class WhisperAeraDevice extends Homey.Device {
       this.error('Error polling device status:', error.message);
       
       if (error.response && error.response.status === 401) {
-        await this.setUnavailable('Authentication required. Please re-login.').catch(err => {
+        await this.setUnavailable(this.homey.__("errors.auth")).catch(err => {
           this.error('Error setting unavailable:', err);
         });
       }

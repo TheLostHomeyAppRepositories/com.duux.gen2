@@ -11,7 +11,109 @@ module.exports = class WhisperAeraDriver extends Homey.Driver {
    */
   async onInit() {
     this.log('Whisper Aera driver has been initialized');
+    const setHorizontalOscillationAction = this.homey.flow.getActionCard('set_horizontal_oscillation_aera');
+    const setVerticalOscillationAction = this.homey.flow.getActionCard('set_vertical_oscillation_aera');
+    const setModeAction = this.homey.flow.getActionCard('set_whisper_flex_2_mode_aera');
+    const enableChildLockAction = this.homey.flow.getActionCard('enable_child_lock_whisper_aera');
+    const disableChildLockAction = this.homey.flow.getActionCard('disable_child_lock_whisper_aera');
+    const enableNightModeAction = this.homey.flow.getActionCard('enable_night_mode_whisper_aera');
+    const disableNightModeAction = this.homey.flow.getActionCard('disable_night_mode_whisper_aera');
+    const enableIonizerAction = this.homey.flow.getActionCard('enable_ionizer_aera');
+    const disableIonizerAction = this.homey.flow.getActionCard('disable_ionizer_aera');
+    const childLockCondition = this.homey.flow.getConditionCard('whisper_child_lock_condition_aera');
+    const nightModeCondition = this.homey.flow.getConditionCard('whisper_night_mode_condition_aera');
+    const ionizerCondition = this.homey.flow.getConditionCard('ionizer_condition_aera');
 
+
+    setModeAction.registerRunListener(async (args, state) => {
+      const device = args.device;
+      if (args.mode === 'normal') {
+        await device.sendCommand("tune set mode 0");
+      } else if (args.mode === 'nature') {
+        await device.sendCommand("tune set mode 1");
+      }
+      return true;
+    });
+
+    setHorizontalOscillationAction.registerRunListener(async (args, state) => {
+      const device = args.device;
+      if (args.mode === 'off') {
+        await device.sendCommand("tune set horosc 0");
+      } else if (args.mode === '30') {
+        await device.sendCommand("tune set horosc 1");
+      } else if (args.mode === '60') {
+        await device.sendCommand("tune set horosc 2");
+      } else if (args.mode === '90') {
+        await device.sendCommand("tune set horosc 3");
+      }
+      return true;
+    });
+
+    setVerticalOscillationAction.registerRunListener(async (args, state) => {
+      const device = args.device;
+      if (args.mode === 'off') {
+        await device.sendCommand("tune set verosc 0");
+      } else if (args.mode === '45') {
+        await device.sendCommand("tune set verosc 1");
+      } else if (args.mode === '100') {
+        await device.sendCommand("tune set verosc 2");
+      }
+      return true;
+    });
+
+    enableChildLockAction.registerRunListener(async (args, state) => {
+      const device = args.device;
+      await device.sendCommand("tune set lock 1");
+      return true;
+    });
+
+    disableChildLockAction.registerRunListener(async (args, state) => {
+      const device = args.device;
+      await device.sendCommand("tune set lock 0");
+      return true;
+    });
+
+    enableNightModeAction.registerRunListener(async (args, state) => {
+      const device = args.device;
+      await device.sendCommand("tune set night 1");
+      return true;
+    });
+
+    disableNightModeAction.registerRunListener(async (args, state) => {
+      const device = args.device;
+      await device.sendCommand("tune set night 0");
+      return true;
+    });
+
+    enableIonizerAction.registerRunListener(async (args, state) => {
+      const device = args.device;
+      await device.sendCommand("tune set ion 1");
+      return true;
+    });
+
+    disableIonizerAction.registerRunListener(async (args, state) => {
+      const device = args.device;
+      await device.sendCommand("tune set ion 0");
+      return true;
+    });
+
+    childLockCondition.registerRunListener(async (args, state) => {
+      const device = args.device;
+      const isChildLock = device.getCapabilityValue('child_lock');
+      return isChildLock;
+    });
+
+    nightModeCondition.registerRunListener(async (args, state) => {
+      const device = args.device;
+      const isNightMode = device.getCapabilityValue('night_mode');
+      return isNightMode;
+    });
+
+    ionizerCondition.registerRunListener(async (args, state) => {
+      const device = args.device;
+      const isIonizerOn = device.getCapabilityValue('ionizer');
+      return isIonizerOn;
+    });
   }
 
   async triggerFlow(card_id, device) {
