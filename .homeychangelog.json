@@ -280,5 +280,8 @@
   },
   "2.10.0": {
     "en": "Added Whisper Aera"
+  },
+  "2.10.1": {
+    "en": "Fixed Flow cards for Whisper Aera"
   }
 }
