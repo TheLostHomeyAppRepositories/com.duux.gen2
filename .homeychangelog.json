@@ -283,5 +283,8 @@
   },
   "2.10.1": {
     "en": "Fixed Flow cards for Whisper Aera"
+  },
+  "2.10.2": {
+    "en": "Added new Push SDK"
   }
 }
