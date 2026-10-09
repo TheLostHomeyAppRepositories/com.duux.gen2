@@ -2,6 +2,7 @@
 
 const Homey = require('homey');
 const axios = require('axios');
+const HomeyPush = require('./lib/push');
 
 
 module.exports = class DuuxV2App extends Homey.App {
@@ -11,6 +12,8 @@ module.exports = class DuuxV2App extends Homey.App {
    */
   async onInit() {
     this.log('Duux Gen2 has been initialized');
+    this.push = new HomeyPush(this);
+    await this.push.startPush();
 
     // automatically send unknown device types to the device-supports-requests API
     const typeIdsToIgnore = [
@@ -211,6 +214,12 @@ module.exports = class DuuxV2App extends Homey.App {
     } catch (error) {
       this.error('Login error:', error);
       return false;
+    }
+  }
+
+  async onUninit() {
+    if (this.push) {
+      this.push.stopPush();
     }
   }
 
