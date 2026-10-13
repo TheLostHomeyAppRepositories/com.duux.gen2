@@ -286,5 +286,8 @@
   },
   "2.10.2": {
     "en": "Added new Push SDK"
+  },
+  "2.10.3": {
+    "en": "Fixed crash issue"
   }
 }
