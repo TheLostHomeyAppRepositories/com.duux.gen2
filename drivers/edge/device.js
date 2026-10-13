@@ -3,10 +3,6 @@
 const Homey = require('homey');
 const axios = require('axios');
 const https = require('https');
-const CacheableLookup = require('cacheable-lookup');
-const cacheable = new CacheableLookup({
-  maxTtl: 300,
-});
 const httpsAgent = new https.Agent({
   keepAlive: true,
   keepAliveMsecs: 10000,
@@ -14,7 +10,6 @@ const httpsAgent = new https.Agent({
   maxFreeSockets: 4,
   timeout: 30000,
 });
-cacheable.install(httpsAgent);
 const apiClient = axios.create({
   baseURL: 'https://v5.api.cloudgarden.nl',
   httpsAgent,
